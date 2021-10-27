@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MaterialTable from "material-table";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Displaytable = () => {
   const columns = [
@@ -24,7 +25,7 @@ const Displaytable = () => {
             {
               name: value.name,
               experience: value.experience,
-              seemore: "showMore",
+              seemore: <a href={`/${value.id}`}>ShowMore</a>,
             },
           ]);
         }

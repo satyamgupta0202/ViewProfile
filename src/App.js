@@ -4,8 +4,8 @@ import Displaytable from "./Components/displayTable";
 function App() {
   return (
     <div className="App">
-      <ProfileData />
-      {/* <Displaytable /> */}
+      {/* <ProfileData /> */}
+      <Displaytable />
     </div>
   );
 }
