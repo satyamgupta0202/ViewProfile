@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700|Roboto:300,400,500,700,900&amp;display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    font-size: 16px;
+    --bg-primary:#1c1c1e;
+    --bg-secondary:#141418;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* ---------------------------------------- */
+/* ------------Header----------------- */
+/* ---------------------------------------- */
+.navbar{
+    top: 0;
+    position: fixed;
+    width: 100vw;
+}
+
+nav {
+    /* position: fixed; */
+    background-color: white ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.items{
+    margin-right: 15px;
+    margin-top: 10px;
+}
+.items img{
+    height: 50px;
+    border-radius: 50px;
+}
+
+nav a{
+    margin-left: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 25px;
+    color: #eb6a2e;
+    font-weight: 600;
+}
+
+/* ---------------------------------------- */
+/* ------------Scroll-Bar----------------- */
+/* ---------------------------------------- */
+
+body::-webkit-scrollbar{
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track{
+    background  :#1e1e24;
+}
+
+body::-webkit-scrollbar-thumb{
+    background :rgb(28, 112, 214);
+}
+
+/* --------------------------------------------- */
+/* -----------Profile-Data---------------------------*/
+/* --------------------------------------------- */
+
+
+.profile-data{
+    margin-top: 70px;
+    text-align: center;
+}
+
+.description{
+    text-align: left;
+}
+
+.title{
+    display: flex;
+    justify-content: flex-start;
+    vertical-align: middle;
+}
+
+.title :last-child{
+    margin-left: auto;
+}
+
+.title h2 img{
+   vertical-align: middle;
+   margin-left: 5px;
+}
+
+.experience{
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.experience ul{
+    display: flex;
+    list-style: none;
+}
+
+.experience ul li:last-child{
+    margin-left: 40%;
+}
+
+.experience ul li h4{
+    margin: unset;
+    color: #575758;
+}
+
+br {
+    content: "";
+    margin: 2em;
+    display: block;
+    font-size: 24%;
+}
+
+.intro{
+    margin-top: 35px;
+    font-size: 18px;
+}
+
+#pfp{
+    height: 250px;
+    border-radius: 250px;
+}
+
+.social-networks{
+    margin-top: 10px;
+    margin-left: 20%;
+    display: flex;
+}
+
+.social-networks img:first-child{
+    margin-left: 20px;
+}
+.social-networks img{
+    height: 30px;
+    margin-left: 30px;
+}
+
+.skills{
+    margin-left: 20%;
+    text-align: left;
+    font-size: 18px;
+    margin-top: 60px;
+}
+
+.skills-list,
+.past-companies{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    list-style: none;
+}
+
+.skills-list li,
+.past-companies li{
+    margin: 15px;
+    background-color: #afafaf76;
+    padding: 10px;
+    font-size: 17px;
+    border-radius: 20px;
+    margin-left: 0;
+}
+
+.past-companies li img{
+    height: 30px;
+    padding: unset;
+}
