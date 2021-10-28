@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MaterialTable from "material-table";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import ProfileData from "./ProfileData";
 const Displaytable = () => {
   const columns = [
     { title: "Name", field: "name" },
@@ -25,7 +25,9 @@ const Displaytable = () => {
             {
               name: value.name,
               experience: value.experience,
-              seemore: <a href={`/${value.id}`}>ShowMore</a>,
+              // ShowMore: <Link to={`/${value.id}`}> ShowMore</Link>,
+              seemore: <a href={`/profile${value.id}`}>ShowMore</a>,
+              // seemore: <a href={<ProfileData data={1} />}>Show More</a>,
             },
           ]);
         }

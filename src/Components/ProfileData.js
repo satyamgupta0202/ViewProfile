@@ -3,14 +3,19 @@ import Summary from "./Summary.js";
 import Session from "./Session";
 import Navigation from "./Navigation";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router";
 
-const ProfileData = () => {
+const ProfileData = (props) => {
+  const dates = useParams();
+  console.log(dates.id);
+  //console.log(props);
   const [userData, setUserData] = useState([]);
   useEffect(() => {
     let mount = true;
     const fetchdata = async () => {
       const res = await fetch(
-        "https://6171c3fac20f3a001705fecd.mockapi.io/api/users/1"
+        `https://6171c3fac20f3a001705fecd.mockapi.io/api/users/${dates.id}`
+        // `https://6171c3fac20f3a001705fecd.mockapi.io/api/users/1
       );
       const finalData = await res.json();
 
