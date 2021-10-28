@@ -3,10 +3,30 @@ import MaterialTable from "material-table";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import ProfileData from "./ProfileData";
 const Displaytable = () => {
+  const [selectedRow, setSelectedRow] = useState(null);
   const columns = [
-    { title: "Name", field: "name" },
-    { title: "Experinece", field: "experience" },
-    { title: "SeeMore", field: "seemore" },
+    {
+      title: "Name",
+      field: "name",
+
+      headerStyle: {
+        backgroundColor: "#039be5",
+      },
+    },
+    {
+      title: "Experinece",
+      field: "experience",
+      headerStyle: {
+        backgroundColor: "#039be5",
+      },
+    },
+    {
+      title: "SeeMore",
+      field: "seemore",
+      headerStyle: {
+        backgroundColor: "#039be5",
+      },
+    },
   ];
   const [tableData, setTableData] = useState([]);
   useEffect(() => {
@@ -44,9 +64,18 @@ const Displaytable = () => {
     <div>
       {/* {tableData && JSON.stringify(tableData)} */}
       <MaterialTable
-        title="Material-Table"
+        title="View My Profile"
         data={tableData}
         columns={columns}
+        onRowClick={(evt, selectedRow) =>
+          setSelectedRow(selectedRow.tableData.id)
+        }
+        options={{
+          rowStyle: (rowData) => ({
+            backgroundColor:
+              selectedRow === rowData.tableData.id ? "#EEE" : "#FFF",
+          }),
+        }}
       />
     </div>
   );
