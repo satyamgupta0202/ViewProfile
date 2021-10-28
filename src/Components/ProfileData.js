@@ -41,7 +41,13 @@ const ProfileData = (props) => {
   }, []);
 
   console.log(userData);
+  let cn = "profile-data";
+  if (window.innerWidth < 700) {
+    cn += " profile-ui-fix";
+  }
+  console.log(cn);
   return (
+    // <div className="profile-data profile-ui-fix">
     <div className="profile-data profile-ui-fix">
       <Navigation data={userData} />
       <Summary data={userData} />

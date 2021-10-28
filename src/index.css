@@ -240,13 +240,15 @@ br {
     margin-top: 1rem;
     margin-left: 1rem;
   }
+  .profile-ui-fix {
+    display: none;
+  }
 }
 .profile-ui-fix {
   display: flex;
 }
 
 .react-calendar {
-  /* margin-left: 20rem; */
   background-color: #deceff;
   align-self: flex-end;
 }
