@@ -4,6 +4,7 @@ import Session from "./Session";
 import Navigation from "./Navigation";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import Footer from "./Footer";
 
 const ProfileData = (props) => {
   const dates = useParams();
@@ -15,7 +16,6 @@ const ProfileData = (props) => {
     const fetchdata = async () => {
       const res = await fetch(
         `https://6171c3fac20f3a001705fecd.mockapi.io/api/users/${dates.id}`
-        // `https://6171c3fac20f3a001705fecd.mockapi.io/api/users/1
       );
       const finalData = await res.json();
 
@@ -31,19 +31,7 @@ const ProfileData = (props) => {
           description: finalData.description,
         });
       }
-      // finalData.forEach((value, index) => {
-      //   // if (mount)
-      //   {
-      //     setUserData((userData) => [
-      //       ...userData,
-      //       {
-      //         name: value.name,
-      //         experience: value.experience,
-      //         seemore: "showMore",
-      //       },
-      //     ]);
-      //   }
-      // });
+
       return userData;
     };
     fetchdata();
@@ -61,6 +49,7 @@ const ProfileData = (props) => {
       <Description data={userData} />
 
       <Session data={userData} />
+      <Footer />
     </div>
   );
 };

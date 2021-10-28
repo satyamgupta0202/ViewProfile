@@ -1,179 +1,249 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700|Roboto:300,400,500,700,900&amp;display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-:root{
-    font-size: 16px;
-    --bg-primary:#1c1c1e;
-    --bg-secondary:#141418;
+:root {
+  font-size: 16px;
+  --bg-primary: #1c1c1e;
+  --bg-secondary: #141418;
 }
 
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* ---------------------------------------- */
 /* ------------Header----------------- */
 /* ---------------------------------------- */
-.navbar{
-    top: 0;
-    position: fixed;
-    width: 100vw;
+.navbar {
+  top: 0;
+  position: fixed;
+  width: 100vw;
 }
 
 nav {
-    /* position: fixed; */
-    background-color: white ;
-    display: flex;
-    justify-content: space-between;
+  /* position: fixed; */
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
 }
 
-.items{
-    margin-right: 15px;
-    margin-top: 10px;
+.items {
+  margin-right: 15px;
+  margin-top: 10px;
 }
-.items img{
-    height: 50px;
-    border-radius: 50px;
+.items img {
+  height: 50px;
+  border-radius: 50px;
 }
 
-nav a{
-    margin-left: 10px;
-    text-decoration: none;
-    margin-top: 15px;
-    font-size: 25px;
-    color: #eb6a2e;
-    font-weight: 600;
+nav a {
+  margin-left: 10px;
+  text-decoration: none;
+  margin-top: 15px;
+  font-size: 25px;
+  color: #eb6a2e;
+  font-weight: 600;
 }
 
 /* ---------------------------------------- */
 /* ------------Scroll-Bar----------------- */
 /* ---------------------------------------- */
 
-body::-webkit-scrollbar{
-    width: 0.5rem;
+body::-webkit-scrollbar {
+  width: 0.5rem;
 }
 
-body::-webkit-scrollbar-track{
-    background  :#1e1e24;
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
 }
 
-body::-webkit-scrollbar-thumb{
-    background :rgb(28, 112, 214);
+body::-webkit-scrollbar-thumb {
+  background: rgb(28, 112, 214);
 }
 
 /* --------------------------------------------- */
 /* -----------Profile-Data---------------------------*/
 /* --------------------------------------------- */
 
-
-.profile-data{
-    margin-top: 70px;
-    text-align: center;
+.profile-data {
+  margin-top: 70px;
+  text-align: center;
 }
 
-.description{
-    text-align: left;
+.description {
+  text-align: left;
+}
+.Experience-item {
+  margin-left: 0.5rem;
 }
 
-.title{
-    display: flex;
-    justify-content: flex-start;
-    vertical-align: middle;
+/* /////////////////////// */
+.title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  /* vertical-align: middle; */
+}
+.short-bio {
+  text-decoration: solid;
+  text-transform: capitalize;
+  color: blueviolet;
+  font-size: larger;
+  margin-left: 0.4rem;
+}
+.Description-heading {
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+.Description-data {
+  margin-bottom: 1rem;
+}
+.card1 {
+  margin-left: 20rem;
+}
+.card-body {
+  background-color: lightblue;
+}
+.card-head {
+  background-color: lightgray;
 }
 
-.title :last-child{
-    margin-left: auto;
+.card-btn {
+  background-color: darkcyan;
+  border-radius: 3rem;
+  border-style: none;
+  padding: 0.5rem;
+  margin: 0.3rem;
 }
 
-.title h2 img{
-   vertical-align: middle;
-   margin-left: 5px;
+@media only screen and (max-width: 600px) {
+  .short-bio {
+    font-size: medium;
+  }
+  .Description-heading {
+    margin-left: 0.5rem;
+  }
+  .Description-data {
+    margin-left: 0.5rem;
+  }
 }
 
-.experience{
-    margin-top: 20px;
-    font-weight: 600;
+.title :last-child {
+  margin-left: auto;
 }
 
-.experience ul{
-    display: flex;
-    list-style: none;
+.title h2 img {
+  vertical-align: middle;
+  margin-left: 5px;
 }
 
-.experience ul li:last-child{
-    margin-left: 40%;
+.experience {
+  margin-top: 20px;
+  font-weight: 600;
 }
 
-.experience ul li h4{
-    margin: unset;
-    color: #575758;
+.experience ul {
+  display: flex;
+  list-style: none;
+}
+
+.experience ul li:last-child {
+  margin-left: 40%;
+}
+
+.experience ul li h4 {
+  margin: unset;
+  color: #575758;
 }
 
 br {
-    content: "";
-    margin: 2em;
-    display: block;
-    font-size: 24%;
+  content: "";
+  margin: 2em;
+  display: block;
+  font-size: 24%;
 }
 
-.intro{
-    margin-top: 35px;
-    font-size: 18px;
+.intro {
+  margin-top: 35px;
+  font-size: 18px;
 }
 
-#pfp{
-    height: 250px;
-    border-radius: 250px;
+#pfp {
+  height: 250px;
+  border-radius: 250px;
 }
 
-.social-networks{
-    margin-top: 10px;
-    margin-left: 20%;
-    display: flex;
+.social-networks {
+  margin-top: 10px;
+  margin-left: 20%;
+  display: flex;
 }
 
-.social-networks img:first-child{
-    margin-left: 20px;
+.social-networks img:first-child {
+  margin-left: 20px;
 }
-.social-networks img{
-    height: 30px;
-    margin-left: 30px;
+.social-networks img {
+  height: 30px;
+  margin-left: 30px;
 }
 
-.skills{
-    margin-left: 20%;
-    text-align: left;
-    font-size: 18px;
-    margin-top: 60px;
+.skills {
+  margin-left: 20%;
+  text-align: left;
+  font-size: 18px;
+  margin-top: 60px;
 }
 
 .skills-list,
-.past-companies{
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    list-style: none;
+.past-companies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
 }
 
 .skills-list li,
-.past-companies li{
-    margin: 15px;
-    background-color: #afafaf76;
-    padding: 10px;
-    font-size: 17px;
-    border-radius: 20px;
-    margin-left: 0;
+.past-companies li {
+  margin: 15px;
+  background-color: #afafaf76;
+  padding: 10px;
+  font-size: 17px;
+  border-radius: 20px;
+  margin-left: 0;
 }
 
-.past-companies li img{
-    height: 30px;
-    padding: unset;
+.past-companies li img {
+  height: 30px;
+  padding: unset;
+}
+
+/* calendar Op */
+@media only screen and (max-width: 600px) {
+  .react-calendar {
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+}
+.react-calendar {
+  /* margin-left: 20rem; */
+  background-color: #deceff;
+  display: block;
+  align-self: flex-end;
 }

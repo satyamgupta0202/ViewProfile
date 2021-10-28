@@ -12,10 +12,12 @@ const Description = (props) => {
           src="https://img.icons8.com/windows/32/000000/bookmark-ribbon--v2.png"
         />
       </div>
-      {props.data.shortBio}
+
+      <p className="short-bio">{props.data.shortBio}</p>
+      {/*  */}
       <div className="experience">
         <ul>
-          <li>
+          <li className="Experience-item">
             <h4>Experience</h4>
             <br />
             {props.data.experience}
@@ -25,11 +27,17 @@ const Description = (props) => {
           </li>
         </ul>
       </div>
+
       <div className="intro">
-        <p>{props.data.description}</p>
+        <p className="Description-heading">Description</p>
+        <p className="Description-data">{props.data.description}</p>
       </div>
-      <Cardss />
-      <Cardss />
+
+      {/*  */}
+      <Cardss className="card1" />
+      <br />
+      <br />
+      <Cardss className="card2" />
     </div>
   );
 };

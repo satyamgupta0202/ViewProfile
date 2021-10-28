@@ -5,12 +5,8 @@ import "react-calendar/dist/Calendar.css";
 const Session = () => {
   const [value, onChange] = useState(new Date());
   return (
-    <div
-      className="col span-1-of-4 session"
-      style={{ display: "flex", marginRight: "2px" }}
-    >
-      <h4>Book Your Session</h4>
-      <Calendar onChange={onChange} value={value} />
+    <div className="col span-1-of-4 session">
+      <Calendar onChange={onChange} value={value} className="react-calendar" />
     </div>
   );
 };
