@@ -241,9 +241,12 @@ br {
     margin-left: 1rem;
   }
 }
+.profile-ui-fix {
+  display: flex;
+}
+
 .react-calendar {
   /* margin-left: 20rem; */
   background-color: #deceff;
-  display: block;
   align-self: flex-end;
 }

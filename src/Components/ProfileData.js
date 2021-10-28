@@ -42,14 +42,13 @@ const ProfileData = (props) => {
 
   console.log(userData);
   return (
-    <div className="profile-data">
+    <div className="profile-data profile-ui-fix">
       <Navigation data={userData} />
       <Summary data={userData} />
 
       <Description data={userData} />
 
       <Session data={userData} />
-      <Footer />
     </div>
   );
 };
