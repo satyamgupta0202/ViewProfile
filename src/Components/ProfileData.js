@@ -41,14 +41,20 @@ const ProfileData = (props) => {
   }, []);
 
   console.log(userData);
-  let cn = "profile-data";
-  if (window.innerWidth < 700) {
-    cn += " profile-ui-fix";
+  let cn = "";
+  if (window.innerWidth > 700) {
+    cn = "profile-data profile-ui-fix";
   }
   console.log(cn);
+  let di;
+  if (cn.length > 0) {
+    di = cn;
+  } else {
+    di = "wow";
+  }
   return (
     // <div className="profile-data profile-ui-fix">
-    <div className="profile-data profile-ui-fix">
+    <div className={di}>
       <Navigation data={userData} />
       <Summary data={userData} />
 

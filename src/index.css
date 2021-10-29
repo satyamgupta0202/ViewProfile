@@ -135,12 +135,15 @@ body::-webkit-scrollbar-thumb {
 
 @media only screen and (max-width: 600px) {
   .short-bio {
+    display: flex;
     font-size: medium;
   }
   .Description-heading {
+    display: flex;
     margin-left: 0.5rem;
   }
   .Description-data {
+    display: flex;
     margin-left: 0.5rem;
   }
 }
@@ -240,8 +243,8 @@ br {
     margin-top: 1rem;
     margin-left: 1rem;
   }
-  .profile-ui-fix {
-    display: none;
+  .profile-data {
+    display: flex;
   }
 }
 .profile-ui-fix {
@@ -251,4 +254,8 @@ br {
 .react-calendar {
   background-color: #deceff;
   align-self: flex-end;
+}
+
+.wow {
+  color: red;
 }
