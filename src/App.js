@@ -1,4 +1,3 @@
-import Navigation from "./Components/Navigation";
 import ProfileData from "./Components/ProfileData";
 import Displaytable from "./Components/displayTable";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";

@@ -32,6 +32,7 @@
   top: 0;
   position: fixed;
   width: 100vw;
+  z-index: 100;
 }
 
 nav {
@@ -119,18 +120,23 @@ body::-webkit-scrollbar-thumb {
   margin-left: 20rem;
 }
 .card-body {
-  background-color: lightblue;
+  background-color: white;
 }
 .card-head {
   background-color: lightgray;
 }
-
+.card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 .card-btn {
-  background-color: darkcyan;
+  background-color: rgba(55, 139, 228, 0.782);
   border-radius: 3rem;
   border-style: none;
+  color: white;
   padding: 0.5rem;
   margin: 0.3rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -189,18 +195,20 @@ br {
 }
 
 #pfp {
-  height: 250px;
-  border-radius: 250px;
+  height: 12rem;
+  border-radius: 15rem;
 }
 
 .social-networks {
   margin-top: 10px;
-  margin-left: 20%;
+  margin-left: 10px;
   display: flex;
+  justify-content: space-evenly;
 }
 
 .social-networks img:first-child {
   margin-left: 20px;
+  margin-left: 2rem;
 }
 .social-networks img {
   height: 30px;
@@ -224,7 +232,7 @@ br {
 
 .skills-list li,
 .past-companies li {
-  margin: 15px;
+  margin: 0.4rem;
   background-color: #afafaf76;
   padding: 10px;
   font-size: 17px;
@@ -238,13 +246,64 @@ br {
 }
 
 /* calendar Op */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 950px) {
   .react-calendar {
     margin-top: 1rem;
     margin-left: 1rem;
   }
+
+  .profile-ui-fix {
+    flex-wrap: wrap;
+  }
+  h2 img {
+    height: 30px;
+  }
+
+  .description {
+    width: 58%;
+    margin-left: 20px;
+  }
+
+  .session {
+    width: 95%;
+    align-items: center;
+  }
+
+  .react-calendar {
+    margin-left: 15%;
+  }
+
+  .summary {
+    width: 28%;
+  }
+
+  .social-networks {
+    margin-left: auto;
+  }
+
+  .social-networks img:first-child {
+    margin-left: 2%;
+  }
+  #pfp {
+    height: 10rem;
+    border-radius: 10rem;
+  }
+
   .profile-data {
     display: flex;
+  }
+
+  body,
+  .summary * {
+    font-size: 15px;
+  }
+
+  .Description-data {
+    font-size: 15px;
+  }
+
+  .description h2 {
+    font-size: 1rem;
   }
 }
 .profile-ui-fix {
@@ -252,10 +311,23 @@ br {
 }
 
 .react-calendar {
-  background-color: #deceff;
+  height: auto;
+  width: 80%;
+  border-radius: 0.5rem;
+  background-color: #aae9f76f;
   align-self: flex-end;
+  margin: 2rem;
 }
-
+.react-calendar__navigation {
+  background-color: white;
+}
 .wow {
   color: black;
+}
+
+@media only screen and (max-width: 580px) {
+  #pfp {
+    height: 8rem;
+    border-radius: 10rem;
+  }
 }
